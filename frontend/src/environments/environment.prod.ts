@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://3.129.5.34:3000/api'
+  apiUrl: 'https://my-sms-backend-20250726-f064f31d5bc4.herokuapp.com/api'
 };
