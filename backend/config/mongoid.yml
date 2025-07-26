@@ -1,7 +1,10 @@
 production:
   clients:
     default:
-      uri: <%= ENV['MONGODB_URI'] %>
+      uri: <%= ENV['MONGODB_URL'] %>
+      options:
+        ssl: true
+        server_selection_timeout: 5
 
 development:
   clients:
@@ -10,10 +13,7 @@ development:
       hosts:
         - localhost:27017
       options:
-        # Optional MongoDB Ruby driver settings
-
-  options:
-    # Mongoid-specific options
+        server_selection_timeout: 5
 
 test:
   clients:
@@ -25,3 +25,4 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+        server_selection_timeout: 5

@@ -19,7 +19,6 @@ class TwilioMessageSender
     )
 
     message.update(status: "sent", sid: twilio_message.sid)
-
   rescue Twilio::REST::RestError => e
     message.update(status: "failed")
     Rails.logger.error("Twilio Error: #{e.message}")

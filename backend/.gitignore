@@ -1,0 +1,26 @@
+# Bundler
+.bundle
+
+# Rails logs and temp
+log/*
+tmp/*
+!log/.keep
+!tmp/.keep
+
+# PIDs
+tmp/pids/*
+!tmp/pids/
+!tmp/pids/.keep
+
+# Uploaded files and dev DBs
+storage/*
+!storage/.keep
+tmp/storage/*
+!tmp/storage/
+!tmp/storage/.keep
+
+# Rails secrets
+config/master.key
+
+# Rails environment files
+.env*
