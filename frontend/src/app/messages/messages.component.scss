@@ -83,7 +83,6 @@
   margin-bottom: 2rem;
 }
 
-/* Numara ve tarih üst bilgi */
 .message-meta {
   display: flex;
   justify-content: space-between;
@@ -102,7 +101,6 @@
   word-wrap: break-word;
 }
 
-/* Karakter sayacı kutunun dışında */
 .length {
   font-size: 0.75rem;
   color: #666;
@@ -177,8 +175,13 @@
 }
 
 @keyframes spin {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 button[type="submit"] {
@@ -210,7 +213,8 @@ button[type="submit"]:hover {
 .message-info {
   display: flex;
   justify-content: space-between;
-  align-items: baseline; /* <== önemli kısım */
+  align-items: baseline;
+  /* <== önemli kısım */
   margin-top: -0.5rem;
   margin-bottom: 1rem;
 }
@@ -218,7 +222,8 @@ button[type="submit"]:hover {
 .error-message-inline {
   color: #d32f2f;
   font-size: 0.75rem;
-  line-height: 1;       /* hizalamayı biraz daha sıkılaştırır */
+  line-height: 1;
+  /* hizalamayı biraz daha sıkılaştırır */
 }
 
 .char-count {

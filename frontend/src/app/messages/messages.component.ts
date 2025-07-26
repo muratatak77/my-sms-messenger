@@ -22,7 +22,7 @@ export class MessagesComponent implements OnInit, OnDestroy {
   constructor(
     private messageService: MessageService,
     private authService: AuthService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadMessages();
@@ -48,11 +48,9 @@ export class MessagesComponent implements OnInit, OnDestroy {
   submitMessage(): void {
     if (!this.message || !this.message.trim()) {
       this.messageError = true;
-      console.log("this.messageError : ", this.messageError)
       return;
     } else {
       this.messageError = false;
-      console.log("this.messageError : ", this.messageError)
     }
 
     const body = { phoneNumber: this.phoneNumber, content: this.message };

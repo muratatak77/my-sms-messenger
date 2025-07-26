@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 export class MessageService {
   private apiUrl = `${environment.apiUrl}/messages`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getMessages() {
     return this.http.get(this.apiUrl);

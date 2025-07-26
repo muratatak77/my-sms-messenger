@@ -1,4 +1,9 @@
+# Controller responsible for user authentication actions.
 class Api::AuthController < ApplicationController
+  # Handles user login.
+  # Expects :username and :password in the params.
+  # If authentication succeeds, returns a JWT token and user info.
+  # If authentication fails, returns an error with status 401.
   def login
     user = User.where(username: params[:username]).first
 

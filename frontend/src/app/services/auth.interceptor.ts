@@ -11,15 +11,15 @@ export const AuthInterceptor: HttpInterceptorFn = (req, next) => {
 
   const authReq = token
     ? req.clone({
-        headers: req.headers.set('Authorization', `Bearer ${token}`)
-      })
+      headers: req.headers.set('Authorization', `Bearer ${token}`)
+    })
     : req;
 
   return next(authReq).pipe(
     catchError((error) => {
       if (error.status === 401) {
-        localStorage.removeItem('token');     // Token'ı temizle
-        router.navigate(['/login']);          // Login sayfasına yönlendir
+        localStorage.removeItem('token');
+        router.navigate(['/login']);
       }
       return throwError(() => error);
     })

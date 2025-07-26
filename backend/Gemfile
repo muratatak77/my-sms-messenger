@@ -45,4 +45,4 @@ gem "bcrypt", "~> 3.1.7"
 gem "jwt", "~> 2.7"
 gem "twilio-ruby"
 gem "rack-cors"
-gem 'delayed_job_mongoid'
+gem "delayed_job_mongoid"

@@ -57,7 +57,6 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
 
   config.hosts << "483cc6a646df.ngrok-free.app"
-  
-  config.active_job.queue_adapter = :delayed_job
 
+  config.active_job.queue_adapter = :delayed_job
 end

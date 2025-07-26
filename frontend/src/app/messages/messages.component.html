@@ -11,30 +11,20 @@
       <form #messageForm="ngForm" (ngSubmit)="submitMessage()" novalidate>
 
         <label>Phone Number</label>
-        <input
-          type="text"
-          [(ngModel)]="phoneNumber"
-          name="phoneNumber"
-          required
-          #phoneInput="ngModel"
-        />
-        <div *ngIf="(phoneInput.invalid && phoneInput.touched) || (phoneInput.invalid && messageForm.submitted)" class="error-message">
+        <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" required #phoneInput="ngModel" />
+        <div *ngIf="(phoneInput.invalid && phoneInput.touched) || (phoneInput.invalid && messageForm.submitted)"
+          class="error-message">
           Phone number is required.
         </div>
 
         <label>Message</label>
-        <textarea
-          [(ngModel)]="message"
-          name="message"
-          maxlength="250"
-          required
-          [ngClass]="{ 'invalid-input': messageError }"
-        ></textarea>
+        <textarea [(ngModel)]="message" name="message" maxlength="250" required
+          [ngClass]="{ 'invalid-input': messageError }"></textarea>
         <div class="message-info">
           <div *ngIf="messageError" class="error-message-inline">Message is required.</div>
           <div class="char-count">{{ message.length }}/250</div>
         </div>
-        
+
         <div class="actions">
           <a href="#" (click)="clear(); $event.preventDefault()">Clear</a>
           <button type="submit">Submit</button>
@@ -52,7 +42,7 @@
             <strong>{{ msg.to }}</strong>
             <span>{{ msg.created_at | date:'EEEE, dd-MMM-yy HH:mm:ss' }} UTC</span>
           </div>
-          
+
           <div class="message-wrapper">
             <div class="message-text">{{ msg.body }}</div>
           </div>
