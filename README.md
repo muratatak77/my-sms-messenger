@@ -9,6 +9,21 @@ It includes JWT-based authentication, background job processing with Delayed Job
 
 ---
 
+Below is a list of features based on the assessment requirements:
+
+| Feature | Status |
+|--------|--------|
+| Send SMS through backend API using Twilio | ✅ Implemented |
+| Store all messages in MongoDB | ✅ Implemented |
+| View all previously sent messages through API | ✅ Implemented |
+| Only messages sent by the logged-in user are visible | ✅ Implemented |
+| **Bonus 1**: Basic user authentication (username & password) | ✅ Implemented using JWT & bcrypt |
+| **Bonus 2**: Live deployment (frontend & backend) | ✅ Completed |
+| **Bonus 3**: Message delivery status via Twilio webhook | ✅ Implemented and displayed in UI |
+
+
+---
+
 ## 🌍 Live Demo
 
 Try the live demo here:  
