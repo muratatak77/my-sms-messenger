@@ -1,0 +1,227 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: #f8f7f6;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* New message form */
+.new-message input,
+.new-message textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.new-message textarea {
+  height: 100px;
+  resize: none;
+}
+
+.char-count {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: right;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions a {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+
+/* History */
+.history {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message-box {
+  margin-bottom: 2rem;
+}
+
+/* Numara ve tarih üst bilgi */
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Mesaj kutusu */
+.message-wrapper {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background-color: white;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Karakter sayacı kutunun dışında */
+.length {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: right;
+  margin-top: 0.25rem;
+  margin-right: 2px;
+}
+
+.header-bar {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+.message-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-badge {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status-badge.delivered {
+  background-color: #d4f7d4;
+  color: #2c7a2c;
+}
+
+.status-badge.failed {
+  background-color: #fddddd;
+  color: #c53030;
+}
+
+.status-badge.pending {
+  background-color: #fdf3c2;
+  color: #a17b00;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ccc;
+  border-top: 2px solid #666;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+button[type="submit"] {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.invalid-input {
+  border: 1px solid #d32f2f !important;
+}
+
+.message-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* <== önemli kısım */
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.error-message-inline {
+  color: #d32f2f;
+  font-size: 0.75rem;
+  line-height: 1;       /* hizalamayı biraz daha sıkılaştırır */
+}
+
+.char-count {
+  font-size: 0.75rem;
+  color: #666;
+}
